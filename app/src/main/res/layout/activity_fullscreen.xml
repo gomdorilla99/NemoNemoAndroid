@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0099cc"
+    tools:context=".FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/GameTitle"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_gravity="center"
+            android:background="#6E885C"
+            android:gravity="bottom"
+            android:text="Level 1"
+            android:textAlignment="center"
+            android:textColor="#E7FD4F"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            app:fontFamily="cursive" />
+
+        <com.example.nemonemo.GameGroundView
+            android:id="@+id/GameGroundView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#6E885C"
+            android:gravity="center"
+            android:keepScreenOn="true"
+            android:textColor="#55C5F1"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+
+
+    </LinearLayout>
+
+
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?metaButtonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent">
+
+            <Button
+                android:id="@+id/ContinueGame"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="284dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/GameContinue"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:typeface="serif"
+                app:fontFamily="cursive" />
+
+            <Button
+                android:id="@+id/GetHints"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="284dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/GetHint"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:typeface="serif"
+                app:fontFamily="cursive" />
+
+            <Button
+                android:id="@+id/ExitGame"
+                style="?metaButtonBarButtonStyle"
+                android:layout_width="284dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/GameExit"
+                android:textColor="#FFFFFFFF"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:typeface="serif"
+                app:fontFamily="cursive" />
+        </LinearLayout>
+    </FrameLayout>
+
+
+
+</FrameLayout>

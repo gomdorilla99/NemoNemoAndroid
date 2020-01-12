@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">네모네모로직</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="GameContinue">Continue</string>
+    <string name="GameExit">Exit</string>
+    <string name="GetHint">Get Hints</string>
+</resources>
